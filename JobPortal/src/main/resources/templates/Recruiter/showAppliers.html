@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="/../Recruiter/RecruiterHomebase::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Job List</title>
+</head>
+<body>
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="row">
+					<div class="col-sm-4">
+						<form class="d-flex" type="post">
+							<input class="form-control me-2 mt-2" type="search"
+								name="keyword" placeholder="Search" aria-label="Search">
+							<button class="btn btn-outline-success btn-dark mt-2 mb-2"
+								type="submit">Search</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<br>
+		<div class="row leftrow">
+			<table id="myTable" class="text-center">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Name</th>
+						<th>Email</th>
+						<th>Password</th>
+						<th>Role</th>
+						<th>Resume</th>
+						<th>dob</th>
+						<th>gender</th>
+						<th>phone</th>
+						<th>city</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="employe : ${employes}">
+						<td th:text="${employe.id}">Item</td>
+						<td th:text="${employe.name}">Item</td>
+						<td th:text="${employe.email}">Item</td>
+						<td th:text="${employe.password}">Item</td>
+						<td th:text="${employe.role}">Item</td>
+					<td><a th:href="@{${'/EmpResume/' + employe.resumeName}}" id="resumeName" th:value="${employe.resumeName}"/>[[${employe.resumeName}]]</td>
+						<td th:text="${employe.dob}">Item</td>
+						<td th:text="${employe.gender}">Item</td>
+						<td th:text="${employe.phone}">Item</td>
+						<td th:text="${employe.city}">Item</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+
+</body>
+</html>

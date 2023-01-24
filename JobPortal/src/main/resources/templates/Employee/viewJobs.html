@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="/../Employee/EmpHomebase::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<section>
+		<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript"
+			src="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.js"></script>
+		<script src="/EmployeeJS/getJobRequest.js"></script>
+		<div class="container"></div>
+		<div class="row">
+			<div class="col-md-8 offset-md-2">
+				<div class="mt-1">
+
+					<h1 class="text-center">Search Jobs</h1>
+
+					<div class="form-group row">
+						<div class="col-10">
+							<form id="getJob" name="getJob" method="post">
+
+								<div class="col-10">
+									<input class="form-control me-2 mt-2" type="search"
+										id="keyword" name="keyword" placeholder="Search"
+										aria-label="Search">
+								</div>
+
+								<br>
+
+								<div>
+									<button type="submit"
+										class="btn bg-primary btn-block text-white">Search</button>
+								</div>
+
+							</form>
+						</div>
+					</div>
+
+				</div>
+			</div>
+          <div class="row leftrow">
+			<div id="responseDiv"></div>
+			<table id="myTable" class="text-center">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Company</th>
+						<th>Language</th>
+						<th>date</th>
+						<th>City</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+
+
+				</tbody>
+			</table>
+			</div>
+		</div>
+	</section>
+
+</body>
+</html>

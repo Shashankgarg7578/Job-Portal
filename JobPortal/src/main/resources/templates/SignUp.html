@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="Homebase::layout(~{::section})">
+<head>
+	<meta charset="ISO-8859-1" />
+<title>Insert title here</title>
+
+</head>
+<body>
+	<section >
+	<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="/HomeJS/AddEmpRecPostRequest.js"></script>
+     <div class="container"></div>    
+        <div class="row">
+           <div class="col-md-8 offset-md-2">
+              <div class="my-card mt-1">
+            
+                <div class="container text-center">
+                <img class="" style="width:80px;" src="" th:src="@{/img/signupregister.png}" alt="" />
+                </div>
+            
+                <h1 class="text-center">Sign-Up</h1>
+                
+                <div id="postResultDiv" align="center"></div>
+                
+                <form  id="saveRoleWise" method="post">
+                  
+                  
+                  
+                  
+                  <!-- Name Field -->
+                  <div class="form-group row">
+                    <label for="name"  class="col-2 col-form-label">Your Name :</label>
+                    <div class="col-10">
+                    <input 
+                    name = "name"
+                    type="text" 
+                    class="form-control" 
+                    id="name" 
+                    aria-describedby="emailHelp"
+                    placeholder="Enter here"
+                    required
+                    />
+                    </div>
+                  </div>
+                  <br>
+                  
+                  <!--Email field -->
+                  
+                  <div class="form-group row">
+                    <label for="email"  class="col-2 col-form-label">Your Email :</label>
+                    <div class="col-10">
+                    <input 
+                    name = "email"
+                    type="email" 
+                    class="form-control" 
+                    id="email" 
+                    aria-describedby="emailHelp"
+                    placeholder="Enter here"
+                    required
+                    />
+                    </div>
+                  </div>
+                
+                <br>
+                <!--Password field -->
+                  
+                  <div class="form-group row">
+                    <label for="password"  class="col-2 col-form-label">Password :</label>
+                    <div class="col-10">
+                    <input 
+                    name = "password"
+                    type="text" 
+                    class="form-control" 
+                    id="password" 
+                    aria-describedby="emailHelp"
+                    placeholder="Enter here"
+                    required/>
+                    </div>
+                  </div>
+                
+                <br>
+                
+                <div class="form-group row">
+                    <label for="role"  class="col-2 col-form-label">Role :</label>
+                    <div class="col-10">
+								<select class="form-select form-select-sm"
+									aria-label=".form-select-sm example" name="role" id="role">
+									<option value="RECRUITER">Recruiter</option>
+									<option value="EMPLOYEE">Employee</option>
+								</select>
+					</div>
+                </div>
+            
+            
+                <br>
+                  
+                 <!-- DOB field -->
+                  <div class="form-group row">
+                    <label for="dob" class="col-2 col-form-label">Date of birth :</label>
+                    <div class="col-10">
+                    <input 
+                    name="dob"
+                    class="form-control" 
+                    type="date"
+                    id="dob"
+                    required
+                    />
+                    </div>
+                  </div>
+                    
+                    <br>
+                    
+                    <div class="form-group row">
+                    <label for="gender"  class="col-2 col-form-label">Gender :</label>
+                    <div class="col-10">
+								<select class="form-select form-select-sm"
+									aria-label=".form-select-sm example" name="gender" id="gender">
+									<option value="Male">Male</option>
+									<option value="Female">Female</option>
+								</select>
+					</div>
+                </div>
+                
+                <br>
+                    
+                    
+            <!-- Mobile Number --> 
+               <div class="form-group row">
+                  <label for="phone" class="col-2 col-form-label">Mobile no.  :</label>
+                   <div class="col-10">
+                   <input 
+                   name="phone"
+                   class="form-control" 
+                   type="number" 
+                   placeholder="Enter here"
+                   id="phone">
+                   </div>
+               </div>
+      
+             <br> 
+             
+             <!-- Current city -->
+             <div class="form-group row">
+                  <label for="city" class="col-2 col-form-label">Current city :</label>
+                   <div class="col-10">
+                   <input 
+                   name="city"
+                   class="form-control" 
+                   type="text" 
+                   placeholder="Enter here"
+                   id="city">
+                   </div>
+               </div>
+      
+             <br> 
+            
+            <!-- terms and condition agreement -->
+            <div class="from-group form-check text-center d-flex justify-content-center align-items-center">
+              <input type="checkbox" 
+                     name="agreement"
+                     class="form-check-input"
+                     id="agreement"
+                     required
+               />
+               <lable for="agreement">Accept terms and condition</lable>
+            </div>
+            
+                <br>
+          
+                <div class="container text-center">
+                <button type="submit" class="btn bg-primary btn-block text-white">submit</button>
+                <button type="reset" class="btn btn-warning btn-block text-white">Reset</button>
+                </div>
+               <br>
+               <br>
+               
+            </form>
+                
+            </div>
+            </div>
+            
+         </div>
+         
+   </section>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="/../Recruiter/RecruiterHomebase::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<section >
+	<section >
+	
+	<script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.js"></script>
+	
+	<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="/RecruiterJS/AddJobPostRequest.js"></script>
+     <div class="container"></div>    
+        <div class="row">
+           <div class="col-md-8 offset-md-2">
+              <div class="my-card mt-1">
+            
+                <div class="container text-center">
+                <img class="" style="width:80px;" src="" th:src="@{/img/signupregister.png}" alt="" />
+                </div>
+            
+                <h1 class="text-center">Add Jobs</h1>
+                
+                <div id="postResultDiv" align="center"></div>
+                
+                <form id="saveJobDetails" name="saveJobDetails" method="post"  enctype="multipart/form-data">
+                  
+                  <!--Comapany Name field -->
+                  
+                  <div class="form-group row">
+                    <label for="companyName"  class="col-2 col-form-label">Company name:</label>
+                    <div class="col-10">
+                    <input 
+                    name = "companyName"
+                    type="text" 
+                    class="form-control" 
+                    id="companyName" 
+                    aria-describedby="emailHelp"
+                    placeholder="Enter here"
+                    required
+                    />
+                    </div>
+                  </div>
+                
+                <br>
+                
+                <div class="form-group row">
+                    <label class="col-2 col-form-label">Skills :</label>
+					 <div class="col-10 custom-file">
+						<select id="jobSkills"  name="jobSkills" class = "choices-multiple-remove-button" placeholder="Select Skills" multiple>
+                          <option value="HTML">HTML</option>
+                          <option value="Jquery">Jquery</option>
+                          <option value="CSS">CSS</option>
+                          <option value="Java">Java</option>
+                          <option value="C">C</option>
+                          <option value="C++">C++</option>
+                          <option value="Spring Boot">Spring Boot</option>
+                          <option value="Javascript">Javascript</option>
+                          <option value="Angular">Angular</option>
+                          <option value="Python">Python</option>
+                          <option value="SQL">SQL</option>
+                          <option value="Hibernate">Hibernate</option>
+                          <option value="Spring">Spring</option>
+                        </select> 
+                    </div>
+					</div>
+                
+                
+                <br>
+                 <!-- Date field -->
+                  
+                  <div class="form-group row">
+                    <label for="date" class="col-2 col-form-label">Date of apply:</label>
+                    <div class="col-10">
+                    <input 
+                    name="date"
+                    class="form-control" 
+                    type="date"
+                    id="date"
+                    required
+                    />
+                    </div>
+                  </div>
+                    
+                    <br>
+       
+                  <!--city field -->
+                  
+                  <div class="form-group row">
+                    <label for="city"  class="col-2 col-form-label">City :</label>
+                    <div class="col-10">
+                    <input 
+                    name = "city"
+                    type="text" 
+                    class="form-control" 
+                    id="city" 
+                    aria-describedby="emailHelp"
+                    placeholder="Enter here"
+                    required/>
+                    </div>
+                  </div>
+                
+                <br>
+                  
+                
+                 <div class="form-group row">
+                  <label for="description" class="col-2 col-form-label">Description:</label>
+                  <div class="col-10">
+                  <textarea 
+                  name = "description" 
+                  placeholder="Enter description !!"  
+                  rows="6" 
+                  id="description"
+                  class="form-control"></textarea></div>
+                </div>
+      
+               <br>
+                  
+      
+             <br>       
+          
+                <div class="container text-center">
+                <button type="submit" class="btn bg-primary btn-block text-white">submit</button>
+                <button type="reset" class="btn btn-warning btn-block text-white">Reset</button>
+                </div>
+               
+            </form>
+                
+            </div>
+            </div>
+            
+         </div>
+         
+          <!-- for select multiple skills -->
+                <script>
+                      var multipleCancelButton = new Choices('.choices-multiple-remove-button', {
+                      removeItemButton: true,
+                      });
+                </script>
+         
+   </section>
+    </section>
+    
+</body>
+</html>
